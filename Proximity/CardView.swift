@@ -18,7 +18,6 @@ struct CardView: View {
 	@Namespace var Namespace
     var body: some View {
 		//GeometryReader { geometry in
-			Group {
 				VStack {
 					ZStack {
 						PostCardView()
@@ -66,7 +65,7 @@ struct CardView: View {
 				//--------------------------
 				.offset(x: 0, y: PostCardTapped ? -160 : 0)//45-(geometry.frame(in: .global).minY) : 0)
 				.animation(.interactiveSpring(response: 0.4, dampingFraction: 0.8, blendDuration: 0.8))
-			}
+		
 		//	Text("\(geometry.frame(in: .global).maxY)")
 		//}
 		.matchedGeometryEffect(id: Index, in: Namespace, properties: .frame, isSource: true)
